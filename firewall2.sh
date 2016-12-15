@@ -1,10 +1,18 @@
 #!/bin/bash
-#
-# firewall based iptables script
-#
-# Written by Patrick LUZOLO SIASIA <p_luzolo@medlib.fr>
-#
+
+### BEGIN INIT INFO
+# Provides:          firewall
+# Required-Start:    mountkernfs $local_fs $remote_fs $syslog
+# Required-Stop:
+# X-Start-Before:    networking
+# X-Stop-After:      networking
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Firewall Medlib
+# Description:       Firewall based iptables script
 # Version:	@(#)firewall  1.0.1  2015-04-25 p_luzolo@medlib.fr
+
+### END INIT INFO
 
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 export PATH
